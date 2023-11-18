@@ -9,19 +9,24 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 </head>
-
+<style>
+    body {
+        background-color: #fff5d7;
+    }
+</style>
 <body>
-    <div style="margin-top: 50px;" class="ui container">
-        <h1 class="ui center aligned header blue arial">To Do List Application</h1>
-
-        <form class="ui form" action="/add" method="post">
-            <div class="field">
-                <label>Todo Title</label>
-                <input type="text" name="title" placeholder="Enter Todo..."><br>
+    <div style="padding: 100px;" class="ui container center aligned">
+        <h1 style="font-size: 5vh; color:black" class="ui center aligned header arial">To Do List Application</h1>
+        <br>
+        <form style="display: inline-block" class="ui form" action="/add" method="post">
+            <div style="display:flex; align-items: center" class="field">
+                <label style="font-size: 2vh; padding: 5px; color:black;">Title</label>
+                <input type="text" name="title" placeholder="Enter Todo...">
+                <button style="margin-left: 2px" class="ui blue button" type="submit">Add</button>
             </div>
-            <button class="ui blue button" type="submit">Add</button>
-        </form>
 
+        </form>
+        <br>
         <hr>
 
         {% for todo in todo_list %}
