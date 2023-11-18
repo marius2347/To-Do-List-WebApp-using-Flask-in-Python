@@ -27,7 +27,7 @@ def home():
     return render_template("base.html", todo_list=todo_list)
 
 
-# add address
+# add task
 @app.route("/add", methods=["POST"])
 def add():
     title = request.form.get("title")
@@ -37,7 +37,7 @@ def add():
     return redirect(url_for("home"))
 
 
-# update address
+# update task
 @app.route("/update/<int:todo_id>")
 def update(todo_id):
     todo = Todo.query.filter_by(id=todo_id).first()
@@ -46,7 +46,7 @@ def update(todo_id):
     return redirect(url_for("home"))
 
 
-# delete address
+# delete task
 @app.route("/delete/<int:todo_id>")
 def delete(todo_id):
     todo = Todo.query.filter_by(id=todo_id).first()
