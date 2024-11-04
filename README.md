@@ -1,4 +1,4 @@
-<h1> Backend Web Application - Python Project</h1>
+<h1>To Do List WebApp using Flask in Python</h1>
 <br>
 <h2>Features</h2>
 <ul>
